@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tallest Cutz | Professional Barber</title>
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        * {margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif;}
+        body {background-color:#111; color:#fff; overflow-x: hidden;}
+        a {text-decoration:none;}
+        .container {width:90%; max-width:1200px; margin:0 auto;}
+
+        /* ===== HERO ===== */
+        .hero {
+            height:100vh;
+            background: url('https://images.unsplash.com/photo-1605462863863-2b4467e7b5d0?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            position:relative;
+        }
+        .hero::after {
+            content:'';
+            position:absolute;
+            top:0; left:0;
+            width:100%; height:100%;
+            background-color:rgba(0,0,0,0.6);
+        }
+        .hero-content {
+            position:relative;
+            z-index:2;
+        }
+        .hero h1 {
+            font-size:3.5em;
+            margin-bottom:20px;
+            color:#FFD700;
+        }
+        .hero p {
+            font-size:1.2em;
+            margin-bottom:30px;
+        }
+        .btn {
+            padding:15px 30px;
+            background-color:#FFD700;
+            color:#111;
+            font-weight:bold;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+        .btn:hover {background-color:#e6c200;}
+
+        /* ===== ABOUT ===== */
+        .about {padding:80px 0; text-align:center;}
+        .about h2 {color:#FFD700; font-size:2.5em; margin-bottom:20px;}
+        .about p {max-width:700px; margin:0 auto; font-size:1.1em; line-height:1.6; color:#ccc;}
+
+        /* ===== BOOKING SECTION ===== */
+        .booking-section {padding:80px 0; background-color:#1a1a1a;}
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        .price-list h3 {color:#FFD700; margin-bottom:15px; border-bottom: 1px solid #333; padding-bottom: 10px;}
+        .price-list ul {list-style:none; margin-bottom:30px;}
+        .price-list li {padding: 10px 0; border-bottom: 1px solid #222; color:#ddd; display: flex; justify-content: space-between;}
+
+        .booking-card {
+            background-color:#222;
+            padding:30px;
+            border-radius:15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .booking-card h2 {text-align:center; color:#FFD700; margin-bottom:25px;}
+        
+        label {display:block; margin-bottom:8px; font-weight:bold; color:#FFD700; font-size: 0.9em;}
+        input, select {
+            width:100%; 
+            padding:12px; 
+            margin-bottom:20px; 
+            border-radius:5px; 
+            border:1px solid #444; 
+            background:#333; 
+            color:#fff;
+        }
+
+        .booking-card button {
+            width:100%;
+            padding:15px;
+            background-color:#FFD700;
+            color:#111;
+            font-weight:bold;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:1.1em;
+            transition: 0.3s;
+        }
+        .booking-card button:hover {background-color:#e6c200;}
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {padding:80px 0; text-align:center;}
+        .testimonials h2 {font-size:2.5em; margin-bottom:50px; color:#FFD700;}
+        .testimonial {max-width:600px; margin:0 auto 30px; font-style:italic; padding: 20px; background: #222; border-radius: 10px;}
+
+        /* ===== POLICIES ===== */
+        .policies {padding:80px 0; background-color:#111;}
+        .policies-content {max-width:800px; margin:0 auto; line-height:1.8;}
+        .policies h2 {text-align: center; color:#FFD700; margin-bottom:30px;}
+        .policy-item {margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #FFD700;}
+
+        /* ===== FOOTER ===== */
+        footer {padding:60px 0; text-align:center; border-top: 1px solid #333;}
+        footer p {margin-bottom:10px; color:#888;}
+
+        /* ===== WHATSAPP BUTTON ===== */
+        .whatsapp-float {
+            position:fixed; bottom:20px; right:20px;
+            background-color:#25D366; color:#fff;
+            padding:15px 25px; border-radius:50px;
+            font-weight:bold; box-shadow:0 4px 10px rgba(0,0,0,0.3);
+            z-index: 100;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media(max-width:768px){
+            .booking-container {grid-template-columns: 1fr;}
+            .hero h1 {font-size: 2.5em;}
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Tallest Cutz</h1>
+        <p>Clean cuts. Sharp confidence. Home & shop barber service.</p>
+        <a href="#booking" class="btn">Book Appointment Now</a>
+    </div>
+</section>
+
+<section class="about">
+    <div class="container">
+        <h2>About Tallest Cutz</h2>
+        <p>
+            Tallest Cutz is a professional barber service focused on clean, modern haircuts.
+            We offer both home service and house shop options, with strong attention to hygiene,
+            punctuality, and customer satisfaction.
+        </p>
+    </div>
+</section>
+
+<section class="booking-section" id="booking">
+    <div class="container">
+        <div class="booking-container">
+            
+            <div class="price-list">
+                <h3>🏠 House Shop Prices</h3>
+                <ul>
+                    <li><span>Full Barbing</span> <span>₦2,000</span></li>
+                    <li><span>Barbing + Dye</span> <span>₦3,500</span></li>
+                    <li><span>Line-up & Shaving</span> <span>₦1,000</span></li>
+                    <li><span>Line-up & Dye</span> <span>₦1,500</span></li>
+                </ul>
+
+                <h3>🚗 Home Service Prices</h3>
+                <ul>
+                    <li><span>Full Barbing</span> <span>₦3,000</span></li>
+                    <li><span>Barbing + Dye</span> <span>₦4,500</span></li>
+                    <li><span>Line-up & Shaving</span> <span>₦1,500</span></li>
+                    <li><span>Line-up & Dye</span> <span>₦2,000</span></li>
+                </ul>
+            </div>
+
+            <div class="booking-card">
+                <h2>Book Your Slot</h2>
+                
+                <label>Your Name</label>
+                <input type="text" id="name" placeholder="Enter your full name">
+
+                <label>Service Type (Location)</label>
+                <select id="location" onchange="updateServiceOptions()">
+                    <option value="House Shop">House Shop (At our location)</option>
+                    <option value="Home Service">Home Service (I come to you)</option>
+                </select>
+
+                <label>Select Service & Price</label>
+                <select id="service">
+                    </select>
+
+                <div style="display:flex; gap:15px;">
+                    <div style="flex:1;">
+                        <label>Date</label>
+                        <input type="date" id="date">
+                    </div>
+                    <div style="flex:1;">
+                        <label>Time</label>
+                        <input type="time" id="time">
+                    </div>
+                </div>
+
+                <button onclick="sendBooking()">Confirm via WhatsApp</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="testimonials">
+    <div class="container">
+        <h2>What Clients Say</h2>
+        <div class="testimonial">⭐⭐⭐⭐⭐<br>“Very clean cuts and professional service. Always on time.”</div>
+        <div class="testimonial">⭐⭐⭐⭐⭐<br>“Best line-up I’ve had in a long time. Highly recommended.”</div>
+    </div>
+</section>
+
+<section class="policies">
+    <div class="container">
+        <div class="policies-content">
+            <h2>Booking Policies</h2>
+            <div class="policy-item"><strong>Appointment Booking:</strong> All appointments are confirmed via WhatsApp.</div>
+            <div class="policy-item"><strong>Punctuality:</strong> Please be ready at the scheduled time.</div>
+            <div class="policy-item"><strong>Cancellations:</strong> Notify us at least 2 hours before your appointment.</div>
+            <div class="policy-item"><strong>Hygiene:</strong> We maintain strictly sterilized tools for every client.</div>
+            <div class="policy-item"><strong>Exact number of people selected</strong> Extra unbooked people may not receive service to keep other appointments on time.
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>Tallest Cutz</strong> — Clean cuts. Sharp confidence.</p>
+        <p>🟢 Open daily: 8:00 a.m – 6:30 p.m</p>
+        <p>📞 +234 90 145 233 20</p>
+        <p>&copy; 2024 Tallest Cutz. All rights reserved.</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/2349014523320" class="whatsapp-float">Chat on WhatsApp</a>
+
+<script>
+    // Price data object
+    const servicesData = {
+        "House Shop": [
+            { name: "Full Barbing", price: "₦2,000" },
+            { name: "Barbing + Dye", price: "₦3,500" },
+            { name: "Line-up & Shaving", price: "₦1,000" },
+            { name: "Line-up & Dye", price: "₦1,500" }
+        ],
+        "Home Service": [
+            { name: "Full Barbing", price: "₦3,000" },
+            { name: "Barbing + Dye", price: "₦4,500" },
+            { name: "Line-up & Shaving", price: "₦1,500" },
+            { name: "Line-up & Dye", price: "₦2,000" }
+        ]
+    };
+
+    // Function to update the dropdown based on Home vs Shop
+    function updateServiceOptions() {
+        const location = document.getElementById("location").value;
+        const serviceSelect = document.getElementById("service");
+        
+        // Clear current options
+        serviceSelect.innerHTML = "";
+
+        // Add correct prices
+        servicesData[location].forEach(item => {
+            const option = document.createElement("option");
+            option.value = `${item.name} (${item.price})`;
+            option.textContent = `${item.name} - ${item.price}`;
+            serviceSelect.appendChild(option);
+        });
+    }
+
+if(!name || !dateInput || !time) return alert("Please fill in all details!");
+        if(loc === "Home Service" && !address) return alert("Please provide your address!");
+
+        // --- Logic to get the Day of the Week ---
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const dateObj = new Date(dateInput);
+        const dayName = days[dateObj.getDay()]; 
+
+        // Build the message
+        let msg = `Hello Tallest Cutz!%0A*Name:* ${name}%0A*Service:* ${serv}%0A*Type:* ${loc}`;
+        
+        if(loc === "Home Service") {
+            msg += `%0A*Address:* ${address}`;
+        }
+        
+        // Added the Day Name here
+        msg += `%0A*Date:* ${dateInput} (${dayName})%0A*Time:* ${time}`;
+
+        window.open(`https://wa.me/2349014523320?text=${msg}`, "_blank");
+    }
+
+    // Run once on load to populate the first set of services
+    window.onload = updateServiceOptions;
+</script>
+
+</body>
+</html>
